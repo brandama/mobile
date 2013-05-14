@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+		<link href="css/reset.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="css/slickQuiz.css" media="screen" rel="stylesheet" type="text/css">
+        <link href="css/master.css" media="screen" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js"></script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+		
+		<script src="js/quiz.js"></script>
+		<script src="js/quiz-config.js"></script>
+	
+        <!-- User-generated css -->
+        <style>
+        </style>
+        <!-- User-generated js -->
+        <script>
+			$(document).ready(function(){
+				$(function () {
+				$('#slickQuiz').slickQuiz();
+				});
+			});
+        </script>
+    </head>
+    <body>
+        <!-- Home -->
+		
+		
+		<div id="#links"></div>
+		
+		<div data-role="page" id="home">
+            <div data-theme="a" data-role="header">
+				<a data-role="button" href="#home" class="ui-btn-right">
+					Home
+				</a>
+                <h3>
+                    Citizenship Study App
+                </h3>
+            </div>
+            <div data-role="content">
+                <div style=" text-align:center">
+                    <img style="width: 288px; height: 100px" src="http://www.siren-bayarea.org/wp-content/uploads/2012/10/citizenship.png" />
+                </div>
+                <a data-role="button" data-theme="b" href="#test">
+                    Test
+                </a>
+                <a data-role="button" data-theme="b" href="#study">
+                    Study
+                </a>
+                <a data-role="button" data-theme="b" href="#scores">
+                    Scores
+                </a>
+                <a data-role="button" data-theme="b" href="#settings">
+                    Settings
+                </a>
+            </div>
+        </div>
+		
+		<!-- Test -->
+		<div data-role="page" id="test">
+			<div data-theme="a" data-role="header">
+				<a data-role="button" href="#home" class="ui-btn-right">
+					Home
+				</a>
+				<h3>
+					Citizenship Study App
+				</h3>
+			</div>
+			<div data-role="content">
+				<div id="slickQuiz">
+					<h1 class="quizName"></h1>
+					<div class="quizArea">
+						<div class="quizHeader">
+						<a class="startQuiz" href="">Get Started!</a>
+						</div>
+					</div>
+					<div class="quizResults">
+						<h3 class="quizScore">You Scored: <span></span></h3>
+						<h3 class="quizLevel"><strong>Ranking:</strong> <span></span></h3>
+						<div class="quizResultsCopy"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+				<!-- Study -->
+		<div data-role="page" id="study">
+			<div data-theme="a" data-role="header">
+				<a data-role="button" href="#home" class="ui-btn-right">
+					Home
+				</a>
+				<h3>
+					Citizenship Study App
+				</h3>
+			</div>
+			<div data-role="content">
+				<h3>
+					Who wrote the Declaration of Independence?
+				</h3>
+				<h4>
+					Thomas Jefferson
+				</h4>
+			</div>
+			<div data-theme="a" data-role="footer" data-position="fixed">
+				<a data-role="button" href="#study" class="ui-btn-left">
+					Previous
+				</a>
+				<a data-role="button" href="#study" class="ui-btn-right">
+					Next
+				</a>
+			</div>
+		</div>
+		
+					<!-- Scores -->
+		<div data-role="page" id="scores">
+			<div data-theme="a" data-role="header">
+				<a data-role="button" href="#home" class="ui-btn-right">
+					Home
+				</a>
+				<h3>
+					Citizenship Study App
+				</h3>
+			</div>
+			<div data-role="content">
+				<h3>
+					Scores
+				</h3>
+				<div class="ui-grid-b">
+					<div class="ui-block-a">
+						<h5>
+							Date
+						</h5>
+					</div>
+					<div class="ui-block-b">
+						<h5>
+							Score
+						</h5>
+					</div>
+					<div class="ui-block-c">
+						<h5>
+							Completed
+						</h5>
+					</div>
+				</div>
+			</div>
+		</div>
+	
+	<!-- Settings -->
+		<div data-role="page" id="settings">
+			<div data-theme="a" data-role="header">
+				<a data-role="button" href="#home" class="ui-btn-right">
+					Home
+				</a>
+				<h3>
+					Citizenship Study App
+				</h3>
+			</div>
+			<div data-role="content">
+				<h3>
+					Settings
+				</h3>
+				<div data-role="fieldcontain">
+					<label for="toggleswitch1">
+						Randomize Question Order
+					</label>
+					<select name="toggleswitch1" id="toggleswitch1" data-theme="a" data-role="slider">
+						<option value="off">
+							Off
+						</option>
+						<option value="on">
+							On
+						</option>
+					</select>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="toggleswitch2">
+						Randomize Flash Card Order
+					</label>
+					<select name="toggleswitch2" id="toggleswitch2" data-theme="a" data-role="slider">
+						<option value="off">
+							Off
+						</option>
+						<option value="on">
+							On
+						</option>
+					</select>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="selectmenu1">
+						Language
+					</label>
+					<select id="selectmenu1" name="">
+						<option value="english">
+							English
+						</option>
+						<option value="spanish">
+							Spanish
+						</option>
+						<option value="Chinese">
+							Chinese
+						</option>
+						<option value="korean">
+							Korean
+						</option>
+						<option value="arabic">
+							Arabic
+						</option>
+						<option value="tagalog">
+							Tagalog
+						</option>
+						<option value="vietnamese">
+							Vietnamese
+						</option>
+					</select>
+				</div>
+				<div data-role="fieldcontain">
+					<label for="selectmenu2">
+						Questions per Test
+					</label>
+					<select id="selectmenu2" name="">
+						<option value="10">
+							10 Questions
+						</option>
+						<option value="20">
+							20 Questions
+						</option>
+						<option value="25">
+							25 Questions
+						</option>
+						<option value="50">
+							50 Questions
+						</option>
+						<option value="100">
+							100 Questions
+						</option>
+					</select>
+				</div>
+			</div>
+		</div>	
+    </body>
+</html>

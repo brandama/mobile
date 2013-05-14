@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>
+        </title>
+		<link href="quiz.css" media="screen" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+		<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.3.0/build/cssreset/reset-min.css">
+
+
+        <script src="https://s3.amazonaws.com/codiqa-cdn/jquery-1.7.2.min.js"></script>
+        <script src="https://s3.amazonaws.com/codiqa-cdn/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+
+		<script type="text/javascript" src="quiz.js"></script>
+    </head>
+    <body>
+
+		<!-- Home -->
+		<div data-role="page" id="select">
+			<div data-role="content">
+				<form action="">
+					<div data-role="fieldcontain">
+						<label for="select_menu">
+							Select Number of Questions
+						</label>
+						<select id="select_menu" name="" data-theme="a">
+							<option value="10">10 Questions</option>
+							<option value="20">20 Questions</option>
+							<option value="40">40 Questions</option>
+							<option value="60">60 Questions</option>
+							<option value="100">100 Questions</option>
+						</select>
+					</div>
+					<input type="submit" data-inline="true" data-theme="b" data-icon="arrow-r" data-iconpos="left" value="Submit" data-mini="true">
+				</form>
+				
+				<form action="">
+					<div data-role="fieldcontain">
+						<label for="textinput3">Or Enter a Custom Number of Questions:</label>
+						<input name="" id="textinput3" placeholder="" value="" type="text" data-mini="true">
+					</div>
+					<input type="submit" data-inline="true" data-theme="b" data-icon="arrow-r" data-iconpos="left" value="Submit" data-mini="true">
+				</form>
+			</div>
+		</div>
+		
+		<!-- Question 1 -->
+		<div data-role="page" id="question_1">
+			<div data-theme="a" data-role="header">
+				<a data-role="button" href="#home" class="ui-btn-right">Home</a>
+				<h3>Citizenship Study App</h3>
+			</div>
+			<div data-role="content">
+				<div class="quiz">
+					<div class="question">
+						<p>Is this quiz the coolest thing since sliced bread?</p>
+						<span>
+							<a data-role="button" data-icon="arrow-r" class="correct" data-theme="a
+							">True</a></li>
+							<a data-role="button" data-icon="arrow-r" data-theme="a">False</a>
+						</span>
+						<div class="explanation hidden">
+							<p>Of course you're right.
+								<a data-role="button" data-inline="true" data-theme="b" href="#question_2" data-icon="arrow-r" data-iconpos="left">Next</a>
+							</p>
+						</div>
+					</div>
+				</div>   	
+				<div class="quizresults">
+					<p class="quiztotal">&nbsp;</p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Question 2 -->
+		<div data-role="page" id="question_2">
+			<div data-theme="a" data-role="header">
+				<a data-role="button" href="#home" class="ui-btn-right">Home</a>
+				<h3>Citizenship Study App</h3>
+			</div>
+			<div data-role="content">
+				<div class="quiz">
+					<div class="question">
+						<p>How much is this App worth?</p>
+						<span>
+							<a data-role="button" data-icon="arrow-r" data-theme="a">$0</a>
+							<a data-role="button" data-icon="arrow-r" data-theme="a">$10</a>
+							<a data-role="button" data-icon="arrow-r" data-theme="a">$100</a>
+							<a data-role="button" data-icon="arrow-r" data-theme="a">$1,000</a>
+							<a data-role="button" data-icon="arrow-r" data-theme="a">$1,000,000</a>
+							<a data-role="button" data-icon="arrow-r" class="correct" data-theme="a">$1,000,000,000</a>
+						</span>
+						<div class="explanation hidden">
+							<p>Of course you're right.</p>
+						</div>
+					</div>
+				</div>   	
+				<div class="quizresults">
+					<p class="quiztotal">&nbsp;</p>
+				</div>
+			</div>
+		</div>
+		
+		
+		
+    </body>
+</html>
