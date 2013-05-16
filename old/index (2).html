@@ -1,0 +1,80 @@
+<html>
+<head>
+    <title>Question Answer Pairs</title>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script type="text/JavaScript">
+        $(document).ready(function(){
+            
+            var MultipleChoice = function(){
+                var Question = new String;
+                var Options = new Array;
+                var CorrectAnswer = new Number; //the index of the correct answer in the options array
+                this.getCorrectAnswer = function(){
+                    return this.CorrectAnswer;
+                };
+                this.addQuestion = function(question){
+                    this.Question = question;
+                };
+                this.addOptions = function(options){
+                    this.Options = options;
+                };
+                this.addCorrectIndex = function(index){
+                    this.CorrectAnswer = index;
+                }
+            }
+            
+            var QuestionSet = new Array;
+
+            //repeat this for each question
+
+            QuestionSet.push(new MultipleChoice);
+            QuestionSet[QuestionSet.length-1].addQuestion("What is the supreme law of the land1?");
+            QuestionSet[QuestionSet.length-1].addOptions(["the Constitution1", "an answer", "a wrong answer", "another wrong answer"]);
+            QuestionSet[QuestionSet.length-1].addCorrectIndex(1);           
+            QuestionSet.push(new MultipleChoice);
+            QuestionSet[QuestionSet.length-1].addQuestion("What is the supreme law of the land2?");
+            QuestionSet[QuestionSet.length-1].addOptions(["the Constitution2", "an answer", "a wrong answer", "another wrong answer"]);
+            QuestionSet[QuestionSet.length-1].addCorrectIndex(2);   
+
+            QuestionSet.push(new MultipleChoice);
+            QuestionSet[QuestionSet.length-1].addQuestion("What is the supreme law of the land3?");
+            QuestionSet[QuestionSet.length-1].addOptions(["the Constitution3", "an answer", "a wrong answer", "another wrong answer"]);
+            QuestionSet[QuestionSet.length-1].addCorrectIndex(1);   
+
+            QuestionSet.push(new MultipleChoice);
+            QuestionSet[QuestionSet.length-1].addQuestion("What is the supreme law of the land4?");
+            QuestionSet[QuestionSet.length-1].addOptions(["the Constitution4", "an answer", "a wrong answer", "another wrong answer"]);
+            QuestionSet[QuestionSet.length-1].addCorrectIndex(1);
+
+
+            // console.log(QuestionSet);
+
+            //once you have 100 questions, to get a random one each time, you need to use a method that gives you a random number between 1 and 100. I use Math.floor((Math.random()*100)+1); (replace 100 with whatever number you want to get a number between 1 and that number.)
+            
+            $('button').click(function(){
+
+                var rand_index = Math.floor((Math.random()*4)+1)-1;
+                var current_question = QuestionSet[rand_index];
+                var question = current_question.Question;
+                var option_html = "<form>";
+                for(var i=0; i<current_question.Options.length; i++)
+                {
+                option_html += "<input type='radio' name='option' value='" + current_question.Options[i] + "'>" + current_question.Options[i] + "<br>";
+                }
+                option_html += "</form>";
+                // console.log(option_html);
+                // console.log(rand_index);
+                // console.log(question);
+                $('#options').html(option_html);
+                $('#question').html(question);
+            });
+
+        })
+    </script>
+</head>
+<body>
+    <button id='show'>Show a question</button>
+    <div id='question'></div>
+    <div id='options'></div>
+</body>
+</html>
